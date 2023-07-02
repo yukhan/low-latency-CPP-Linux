@@ -1,4 +1,4 @@
-# low-latency-CPP-Linux
+# C++ and Linux techniques for low latency systems
 Low latency CPP/Linux will dive into low latency techniques used in C++ and Linux.I will create a curated list of C++ and Linux low-latency features, which will then be supported by a detailed blog post.
 
 When it comes to building low-latency systems using C++ and Linux, several essential components contribute to achieving optimal performance. Here are some key considerations:
@@ -36,7 +36,7 @@ Excessive Object Copying: Frequent object copying, especially for large or compl
 
 It's important to note that the impact of these features on latency can vary depending on the specific use case, system requirements, and optimization efforts. Analyzing the performance characteristics of your system, profiling, and benchmarking are crucial steps to identify and mitigate any potential performance bottlenecks.
 
-# list of linux kernel tuning for ultra low latency systems
+# Linux kernel tuning for ultra low latency systems
 CONFIG_PREEMPT_RT Patch: Applying the PREEMPT_RT patch to the kernel provides real-time capabilities, allowing critical tasks to preempt non-critical ones. This patch reduces latency by providing deterministic scheduling.
 
 CONFIG_HZ: This configuration option sets the kernel timer frequency. Lowering the value of CONFIG_HZ increases the timer interrupt frequency, providing more precise timekeeping and reducing latency.
