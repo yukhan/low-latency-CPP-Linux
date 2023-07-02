@@ -36,7 +36,7 @@ Excessive Object Copying: Frequent object copying, especially for large or compl
 
 It's important to note that the impact of these features on latency can vary depending on the specific use case, system requirements, and optimization efforts. Analyzing the performance characteristics of your system, profiling, and benchmarking are crucial steps to identify and mitigate any potential performance bottlenecks.
 
-# list the linux kernel tuning for ultra low latency systems
+# list of linux kernel tuning for ultra low latency systems
 CONFIG_PREEMPT_RT Patch: Applying the PREEMPT_RT patch to the kernel provides real-time capabilities, allowing critical tasks to preempt non-critical ones. This patch reduces latency by providing deterministic scheduling.
 
 CONFIG_HZ: This configuration option sets the kernel timer frequency. Lowering the value of CONFIG_HZ increases the timer interrupt frequency, providing more precise timekeeping and reducing latency.
