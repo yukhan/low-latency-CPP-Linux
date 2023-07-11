@@ -1,9 +1,7 @@
 
-#include <iostream>
 #include <type_traits>
 #include <vector>
 #include <initializer_list>
-using namespace std;
 template<typename T>
 class myVector
 {
@@ -200,51 +198,3 @@ private:
 	T* capacity_= nullptr;
 };
 
-struct BigClass
-{
-	BigClass(int xx, int yy):x(xx), y(yy){};
-	int x;
-	int y;
-};
-int main()
-{
-	myVector<int> v;
-	v.push_back(1);
-	v.push_back(2);
-	v.push_back(3);
-	v.push_back(4);
-	cout<<"myVector size = "<< v.size() << "\n";
-	cout<<"popped value = " << v.pop_back() << "\n";
-	cout<<"popped value = " << v.pop_back() << "\n";
-	cout<<"popped value = " << v.pop_back() << "\n";
-	cout<<"popped value = " << v.pop_back() << "\n";
-	cout<<"myVector size after pop = "<< v.size() << "\n";
-	v.push_back(4);
-	v.push_back(3);
-	v.push_back(2);
-	v.push_back(1);
-	cout<<"myVector size = "<< v.size() << "\n";
-
-	for(int i=0; i < v.size(); ++i)
-		cout<<"v[i] : "<< v[i] << "\n";
-
-
-	myVector<BigClass> mbg;
-	mbg.push_back(BigClass(1,2));
-	mbg.push_back(BigClass(3,4));
-	mbg.push_back(BigClass(5,6));
-	mbg.push_back(BigClass(7,8));
-
-	BigClass bg(9,10);
-	mbg.push_back(bg);
-	cout<<"myVector size = "<< mbg.size() << "\n";
-
-	for(int i=0; i < mbg.size(); ++i)
-		cout<<"mbg[i] : "<< mbg[i].x <<" : "<< mbg[i].y << "\n";
-
-	std::vector<int> vbg{4,5,6,7,8,9};
-	myVector<int> inl(vbg.begin(), vbg.end());
-	for(auto const& el : inl)
-		cout<<"element : "<< el << "\n";
-
-}
